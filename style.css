@@ -76,7 +76,9 @@ header{
 
 
     .slideshow {
-      
+      flex-basis: 100%;
+      flex-wrap: nowrap;
+      display: flex;
       background-color: #000000;
       width: 10000px;
       margin: auto;
