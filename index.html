@@ -1,0 +1,203 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js\parallax-slideshow\dist\style.css" type="text/css" media="screen">
+    <script src="js\jquery.js" type="text/javascript"></script>
+    <script src="js\slideshow.js" type="text/javascript"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="menu_align">
+                <ul>
+                    <li  id="menu_logo" style="color: white;">Conexão ETE</li>
+                    <li class="active" style="color: white;" ><a href="#"style="color: white;">Home</a></li>
+                    <li><a href="#"style="color: white;">Sobre</a></li>
+                    <li><a href="#"style="color: white;">Contatos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+ <div id="alight_content">
+   
+        <div class="slideshow">
+        <div class="holder" >
+          <div class="slide-1"></div>
+          <div class="slide-2"></div>
+          <div class="slide-3"></div>
+          <div class="slide-4">  </div>
+          <div class="slide-5">  </div>
+   
+          </div>
+   
+          <div class="steps">
+   
+          </div>
+   
+          <a href="#" class="prev" style="color: rgb(255, 255, 255);
+        padding: 220px 70px;
+        position: absolute;
+        bottom: 0;
+        text-decoration: none;
+        z-index: 1;
+      font-size: xx-large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal; ">anterior</a>
+            <a href="#" class="next" style="color: rgb(255, 255, 255);
+        padding: 220px 70px;
+        position: absolute;
+        bottom: 0;
+        text-decoration: none;
+        z-index: 1;
+      font-size: xx-large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;">proximo</a>
+   
+          <script src="/js/jquery.js"></script>
+          <script src="/js/slideshow.js"></script>
+          <script type="text/javascript">
+                    //whenever we load the page, always display the first slide
+   var currentSlide = 0
+   
+   //here we set how many slides we have using the .length property
+   //this is useful because we can use it as our max slide value
+   var totalSlides = $('.holder div').length
+   
+   
+   // 1. a function that deals with taking us to the next slide
+   var nextSlide = function(){
+   // increment our currentSlide value by reassigning it and increlenting 	   it by 1
+     currentSlide = currentSlide + 1
+     
+     //a continuacion ponemos este codigo para que nuestras slides y numeros no sigan avanzando cuando lleguen a la 4ta
+     //
+     if(currentSlide >= totalSlides){
+    currentSlide = 0
+     }
+   // we are going to turn our currentSlide value into a negative vw unit
+     var leftPosition = (-currentSlide * 100)  + 'vw'
+   // here we add the 'vw' unit into the end
+   
+   // pass the vw unit into our css method below
+   //here we grab the holder and change it to the second slide
+     $('.holder').css('left', leftPosition)
+     
+   var slideNumber = currentSlide + 1
+   // here we set the text for the steps using currentSlide and total nubmer
+   $('.steps').text(slideNumber + ' / ' + totalSlides)
+   }
+   
+   //2. a function that deals with taking us to the previous slide
+   
+   var previousSlide = function(){
+    //this is identical to our nextSlide function, apart from that we are decrementing the currentSlide value (taking us back rather than fowards)
+     currentSlide = currentSlide - 1
+     
+    //a continuacion ponemos este codigo para que nuestras slides y numeros no sigan retrocediendo cuando lleguen al 0 
+    //
+    if(currentSlide < 0){
+    currentSlide = totalSlides - 1
+    }
+     
+     var leftPosition = (-currentSlide * 100)  + 'vw'
+     $('.holder').css('left', leftPosition)
+     
+   var slideNumber = currentSlide + 1
+   // here we set the text for the steps using currentSlide and total nubmer
+   $('.steps').text(slideNumber + ' / ' + totalSlides)
+   }
+   
+   //setInterval allows us to run a function every x amount of time
+   var autoSlide = setInterval(function(){
+   // here our nextSlide function will be run
+   nextSlide()
+   // runs every 3seconds (3000ms)
+   }, 3000)
+   
+   //we also have setTimeout, wich is the same, but runs only once
+   
+   $('.next').on('click', function(){
+     //this is going to cancel our autoSlide interval function
+     //as the user has taken over control of the slideshow
+     clearInterval(autoSlide)
+     // here we call the nextSlide function and fo to the next slide
+     nextSlide()
+   })
+   
+   
+   $('.prev').on('click', function(){
+     clearInterval(autoSlide)
+     previousSlide()
+   })
+   
+   $('body').on('keydown', function(event){
+     var keyCode = event.keyCode
+     if(keyCode ==37){
+    clearInterval(autoSlide)
+    previousSlide()
+     }
+   if(keyCode ==39){
+    clearInterval(autoSlide)
+    nextSlide()
+   }
+   })
+          </script>
+   </div>
+   
+    <section >
+      <article>
+        <img src="img/via sacra.jpeg" alt="" title="" width="180" height="100px">
+        <div class="content-post">
+          <div class="title">LOREM</div>
+          <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl est,</div>
+          <a href="#" style="padding: 10px 50px;
+    float: left;
+    text-decoration: none;
+    color:white;
+    background-color:#396afc;
+    font: 15px 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    border-radius: 4px
+   ">continue lendo</a>
+   
+        </div>
+      </article>
+      <article>
+        <img src="img/via sacra.jpeg" alt="" title="" width="180" height="100px">
+        <div class="content-post">
+          <div class="title">LOREM</div>
+          <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl est...</div>
+          <a href="#" style="padding: 10px 50px;
+    float: left;
+    text-decoration: none;
+    color:white;
+    background-color:#396afc;
+    font: 15px 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    border-radius: 4px
+   ">continue lendo</a>
+   
+        </div>
+      </article>
+    </section>
+    <aside>
+    <form>
+            <h3 class="enquete-titulo">esta animado para o são joão?</h3>
+            <div class="enquete-opcao">
+                <input type="radio" id="sim" value="sim">
+                <label for="mussarela">sim</label>
+            </div>
+            <div class="enquete-opcao">
+                <input type="radio" id="nao"  value="sim">
+                <label for="calabresa">não</label>
+            </div>
+            
+            <button type="submit" class="enquete-botao">Votar</button>
+        </form>
+    </aside>
+ 
+    </body>
+</html>

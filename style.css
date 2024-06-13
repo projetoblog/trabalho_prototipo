@@ -1,0 +1,246 @@
+body{
+  background:  #FFFEFF;  /* fallback for old browsers */
+
+  
+}
+nav{
+    margin-top: 1px;
+    
+    background-color: #ff00ff;
+    border-bottom: 6px solid #F64740;
+    border-top: 4px solid #F64740;
+    border-right: 40px solid #F64740;
+    border-radius: 10px
+  
+}
+
+#menu_logo{
+    background-repeat: no-repeat;
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    margin: 5px 15px;
+    width: 700px;
+    height: 41px;
+    float: left;
+    padding: 10px  ;
+}
+nav ul{
+      
+    padding: 10px 23px;
+    right: auto;
+    padding: 0px 20px;
+    margin: 0px;
+    float: left;
+    width: 100%;
+    
+    list-style: none;
+    background-color:#396afc;
+}
+nav ul li{
+    
+    display: inline;
+    padding: 10px 0px 0px 60px;
+    
+    color: #0E0F19;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-size: 25px;
+}
+nav ul li a{
+    padding: 2px 50px;
+    float: left;
+    color: #0E0F19;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    padding: 2px 50px;
+    float: left;
+    text-decoration: none;
+    color: #0E0F19;
+    border-bottom: 5px solid #F64740;
+}
+header{
+    
+   
+}
+
+
+    .slideshow {
+      
+      background-color: #000000;
+      width: 10000px;
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+      
+      width: 99vw;
+      width: 100%;
+      height: 85vh;
+    }
+    
+    .holder {
+      
+      margin: 0 auto;
+      position: relative;
+      top: 0;
+      left: 0;
+      
+      width: 1000vw;
+      height: 100vh;
+      transition: left 1s;
+      
+    }
+    
+    .holder div {
+      
+      margin: auto;
+      float: left;
+      width: 100vw;
+      height: 100vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 20px 0px;
+    }
+    
+    .slide-1 {
+      border-image: auto;
+      background-image: url(img/via\ sacra.jpeg);
+    }
+    
+    .slide-2 {
+      border-image: auto;
+      background-image: url(img/via\ sacra2.jpeg);
+    }
+    
+    .slide-3 {
+      border-image: auto;
+      background-image: url(img/via\ sacra.jpeg);
+    }
+    .slide-4 {
+      border-image: auto;
+        background-image: url(img/WhatsApp\ \ -\ at\ 5.45.06\ PM.jpeg);
+      }
+      
+      .slide-5 {
+        border-image: auto;
+        background-image: url(img/via\ sacra2.jpeg);
+    }
+    
+   
+    
+    .steps {
+      
+      color: #FFFEFF;
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      width: 100%;
+      font-size: xx-large;
+      overflow: hidden;
+      text-align: center;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-style: normal;
+      
+      
+    }
+    
+   
+    
+    .prev {
+      padding: 10px;
+      left: 0;
+    }
+    
+    .next {
+      right: 0;
+    }
+    article{
+      
+      height: 250px;
+      margin-top: 20px;
+      background-color: #FFFEFF;
+      box-shadow: 2px 2px 2px 2px black;
+    }
+    article img{
+      border:  solid #aaa;
+      padding: 5px;
+      margin: 15px 20px;
+      float: left;
+      
+      box-shadow: 1px 1px 1px black;
+      
+    }
+    article .title{
+          font: 25px 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+          color: f64740;
+          
+    }
+    article .content-post{
+      padding: 15px;
+    }
+    article .content{
+      margin: 10px;
+      font: 15px 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+      text-align: justify;
+    }
+    #post{
+      padding: 20px 50px;
+    float: left;
+    text-decoration: none;
+    color: #0E0F19;
+    border-bottom: 5px solid #F64740;
+    }
+    aside{
+      background-color:#f64740;
+      width: 28%;
+      height: 200px;
+      float: right;
+      border-radius: 5px;
+      margin-top: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      font: 15px 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+      
+    }
+    #alight_content{
+      
+      width: 1280px;
+      margin: 0 auto;
+
+    }
+    section{
+      width: 70%;
+      float: left;
+      margin: 0px auto;
+    }
+ 
+  .enquete-titulo {
+    text-align: center;
+      font-size: 18px;
+      margin-bottom: 15px;
+      font: 15px 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  }
+  .enquete-opcao {
+      width: 100px;
+      padding: 10px;
+      margin: 10px 0;
+      font: 15px 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  }
+  .enquete-opcao label {
+      margin-left: 5px;
+  }
+  .enquete-botao {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 55px;
+      background-color: #0056b3;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  .enquete-botao:hover {
+      background-color: #003d82;
+  }
