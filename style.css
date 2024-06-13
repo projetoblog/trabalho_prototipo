@@ -10,8 +10,6 @@
 body{
   background:  #FFFEFF;  /* fallback for old browsers */
 
-  margin: 0;
-  padding: 0;
 }
 nav{
     margin-top: 1px;
@@ -78,7 +76,7 @@ header{
 
     .slideshow {
      
-      display: flex;
+      
       background-color: #000000;
       width: 10000px;
       margin: auto;
